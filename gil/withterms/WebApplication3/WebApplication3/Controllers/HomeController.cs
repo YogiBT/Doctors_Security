@@ -50,15 +50,15 @@ namespace WebApplication3.Controllers
         /// Submit method, enter details and validate.
         /// </summary>
         /// <returns></returns>
-        public ActionResult Submit()
+        public ActionResult Submit()//login
         {
             string txtID = Request.Form["txtID"].ToString();
             string txtPassword = Request.Form["txtPassword"].ToString();
             Encryption enc = new Encryption();
-            if (!ModelState.IsValid && this.IsCaptchaValid("Wrong! you ROBOT!"))
+            if (!this.IsCaptchaValid("Wrong! you ROBOT!"))
             {
                 Session["WarningMessage"] = "Wrong Username or Password !";
-                return View("ShowHomePage", "Home");
+                return RedirectToAction("ShowHomePage", "Home");
             }
 
             AdminDAL adm = new AdminDAL();

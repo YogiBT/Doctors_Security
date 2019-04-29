@@ -19,7 +19,7 @@ namespace WebApplication3.Controllers
         /// </summary>
         /// <param name="usr"></param>
         /// <returns></returns>
-        public ActionResult Submit(User usr)
+        public ActionResult Submit(User usr)//signin
         {
             
             if (ModelState.IsValid && this.IsCaptchaValid("Wrong! you ROBOT!"))

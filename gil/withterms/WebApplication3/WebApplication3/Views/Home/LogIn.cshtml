@@ -38,33 +38,20 @@
                 <input id="Text2" name="txtPassword" type="password" />
             </td>
         </tr>
-        
         <tr>
 
             <td>
                 Enter captcha value:
                 @Html.MathCaptcha()
                 <p>@ViewBag.ErrorMessage</p>
-                <input id="Text3" name="txtCaptcha" type="text"
             </td>
         </tr>
-            
         <tr>
             <td>
                 <input id="Submit1" type="submit" value="submit" />
             </td>
         </tr>
-     @*   <tr>
-            <td>
-                @Html.MathCaptcha()
-                <p>@ViewBag.ErrorMessage</p>
-            </td>
-        </tr>
-         *@
     </table>
-    @*   new { txtID = Request.Form["txtID"].ToString(), txtPassword = Request.Form["txtPassword"].ToString() }*@
-
-
 </form>
 
 

@@ -84,7 +84,6 @@
     <div>
         @using (Html.BeginForm("Submit", "User", FormMethod.Post))
         {
-
             <table class="table">
                 <tr>
                     <td>
@@ -115,7 +114,6 @@
                         <i>Email</i>
                         @Html.TextBoxFor(m => m.Email) @Html.ValidationMessageFor(x => x.Email)
                     </td>
-                    
                 </tr>
                 <tr>
                     <td>
@@ -124,21 +122,8 @@
                     </td>
                 </tr>
                 </table>
-
-
-
-
-
-
-
             <input id="Submit1" type="submit" value="Add User" />
         }
-
         @Html.ValidationSummary()
-
-
-
-
-
     </div>
 </body>
